@@ -1,0 +1,40 @@
+name: Moba
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: JosefinSans
+      fonts:
+        - asset: fonts/JosefinSans-Italic-VariableFont_wght.ttf
+        - asset: fonts/JosefinSans-VariableFont_wght.ttf
+  assets:
+    - assets/icons/moba_app.png  # Asegúrate de que la ruta a tu ícono es correcta
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+  fl_chart: ^0.69.0
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.0  # Asegúrate de usar la última versión
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/moba_app.png"  # La ruta a tu ícono
+  adaptive_icon_background: "#ffffff"  # Opcional: color de fondo para íconos adaptables en Android
+  adaptive_icon_foreground: "assets/icons/moba_app.png"  # Opcional: para íconos adaptables en Android

@@ -1,0 +1,33 @@
+// build.gradle (nivel de proyecto)
+
+buildscript {
+    repositories {
+        google() // Asegúrate de tener el repositorio de Google
+        mavenCentral() // Ya está incluido correctamente
+    }
+
+    dependencies {
+        // Asegúrate de utilizar la versión más reciente de Gradle
+        classpath 'com.android.tools.build:gradle:8.1.2' // Actualiza a la versión más reciente
+        classpath 'com.google.gms:google-services:4.3.15' // Esta línea es importante para Firebase
+    }
+}
+
+allprojects {
+    repositories {
+        google() // Ya está correcto
+        mavenCentral() // Ya está correcto
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,3 @@
+android: true
+ios: true
+image_path: "assets/icons/moba_app.png"  # Ruta a tu ícono
